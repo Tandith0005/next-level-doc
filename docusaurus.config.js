@@ -108,7 +108,7 @@ const config = {
             items: [
               {
                 label: "Docs",
-                to: "/docs/intro",
+                to: "/docs/Mission%201:%20Be%20A%20Critical%20Thinker%20With%20JS/Module%201:%20Mindset%20Over%20Syntax",
               },
             ],
           },
