@@ -309,7 +309,7 @@ export default function Home() {
               }}
             >
               <a
-                href="/docs/Mission%201:%20Be%20A%20Critical%20Thinker%20With%20JS/Module%201:%20Mindset%20Over%20Syntax"
+                href="/docs/mission-1-be-a-critical-thinker-with-js/module-1-mindset-over-syntax"
                 className="glow-effect"
                 style={{
                   display: "inline-flex",

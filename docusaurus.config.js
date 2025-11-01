@@ -23,7 +23,7 @@ const config = {
   url: "https://srdo96.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/next-level-doc/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -108,7 +108,7 @@ const config = {
             items: [
               {
                 label: "Docs",
-                to: "/docs/Mission%201:%20Be%20A%20Critical%20Thinker%20With%20JS/Module%201:%20Mindset%20Over%20Syntax",
+                to: "/docs/mission-1-be-a-critical-thinker-with-js/module-1-mindset-over-syntax",
               },
             ],
           },
