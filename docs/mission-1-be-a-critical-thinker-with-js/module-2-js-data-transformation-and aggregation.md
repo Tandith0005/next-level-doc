@@ -29,8 +29,21 @@
 
   Both entries overwrite each other because the key becomes the same string, losing the association between each student and their grade.
 
-To over this limitation we can use JavaScript Built-in data stricture `Map`
+To overcome this limitation we can use JavaScript Built-in data stricture `Map`
 
 :::info
 `Map` এ আমরা যেকোন ডাটা টাইপকে অবজেক্টের কি হিসাবে রাখতে পারি। `Map` এই key data কে string এ convert করবে না।
 :::
+
+```js
+const student1 = { id: 101, name: "Asif" };
+const student2 = { id: 102, name: "Rasel" };
+
+// Using Map to associate objects as keys with values
+const grades = new Map();
+grades.set(student1, "A"); // Map allows student1 object as key
+grades.set(student2, "B"); // Map allows student2 object as key
+
+console.log(grades.get(student1)); // Output: "A"
+console.log(grades); // Output: Map(2) { { id: 101, name: "Asif" } => "A", { id: 102, name: "Rasel" } => "B" }
+```
