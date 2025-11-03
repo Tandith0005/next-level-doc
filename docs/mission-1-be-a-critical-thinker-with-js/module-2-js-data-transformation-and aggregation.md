@@ -263,3 +263,34 @@ const range = (start, end, step = 1) =>
     (_, i) => start + i * step
   );
 ```
+
+## From Simple Totals to Powerful Aggregation (reduce)
+
+```js markdown
+// Sample cart items data
+const cartItems = [
+  { id: 1, name: "Bag", price: 1500, quantity: 1 },
+  { id: 2, name: "Cable", price: 350, quantity: 2 },
+  { id: 3, name: "Cap", price: 800, quantity: 1 },
+];
+
+const subTotal = cartItems.reduce((acc, item) => {
+  return acc + item.price * item.quantity;
+}, 0);
+```
+
+```js
+const players = [
+  { name: "Jamal Bhuyan", score: 88 },
+  { name: "Shekh Morsalin", score: 81 },
+  { name: "Rakib Hossain", score: 95 },
+  { name: "Topu Barman", score: 72 },
+];
+
+players.reduce((acc, player) => {
+  if (player.score > acc.score) {
+    return player;
+  }
+  return acc;
+}, players[0]);
+```
