@@ -53,7 +53,7 @@ counter.print() // 5
 
 It will always return the same output for the same input.
 
-## Closer
+### Closer
 
 **Closure:**  
 A closure in JavaScript is when a function remembers the variables from its outer scope even after that scope has finished executing.  
@@ -76,7 +76,7 @@ console.log(counter(5)); // 8
 
 In this example, the inner function still has access to the `count` variable even after `createCounter` has finished running.
 
-## Class
+### Class
 
 Class is just like a template. From class we can create object as many as we want.
 
@@ -97,4 +97,56 @@ class Counter {
 const counter1 = new Counter(0);
 counter1.add(2); // 2
 counter1.add(3); // 5
+```
+
+## 3-3 Stack Implementation using Array
+
+### Stack
+
+**Stack** is a data stricture that follow Last In First Out (LIFO) principle.
+
+It store data one top of another. it has three methods
+
+- **push**: To add new element to a stack
+- **pop**: To remove the last element of a stack
+- **peek**: To see the last element of a stack with out remove it
+
+```js title="Stack Implementation" showLineNumbers {6-23}
+class Stack {
+  constructor() {
+    this.items = [];
+  }
+  // O(1)
+  push(data) {
+    this.items.push(data);
+  }
+  // O(1)
+  pop() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    return this.items.pop();
+  }
+  // O(1)
+  peek() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    index = this.items.length - 1;
+    return this.items[index];
+  }
+  // O(1)
+  isEmpty() {
+    return this.items.length === 0;
+  }
+  // O(n)
+  print() {
+    console.log(this.items.slice().reverse().join(" -> "));
+  }
+}
+const stack = new Stack(); // create new stack
+stack.push(10); // add 10
+stack.push(20); // add 20
+stack.pop(); // last element 20 remove
+stack.peek(); // 10
 ```
