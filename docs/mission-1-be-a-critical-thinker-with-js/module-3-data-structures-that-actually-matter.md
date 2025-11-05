@@ -192,7 +192,7 @@ class Queue {
 const queue = new Queue()
 ```
 
-### 3-5 Linked-list - A Visual Representation
+## 3-5 Linked-list - A Visual Representation
 
 In linked list, it is a list of nodes and each nodes can contain value and can connect in next node and previous node using pointer.
 
@@ -200,8 +200,29 @@ In linked list, it is a list of nodes and each nodes can contain value and can c
 
 - **Tail**: If the node does not have any last node pointer then it is last node or tail.
 
-```mermaid
-graph LR
-   A[10] <--> B[20]
-   B <--> C[30]
+- **Node**: combined of data and next (pointer address of next node)
+
+![Linked List](../../static/img/linkedlist.png)
+
+## 3-6 Linked List Implementation - Basic concept of Node
+
+![Type of Linked List](../../static/img/type_linkedlist.png)
+
+```js title="Basic Linked list" showLineNumbers
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+const head = new Node(10);
+head.next = new Node(20);
+head.next.next = new Node(30);
+
+// print linked list
+let temp = head;
+while (temp !== null) {
+  console.log(temp.value);
+  temp = temp.next;
+}
 ```
