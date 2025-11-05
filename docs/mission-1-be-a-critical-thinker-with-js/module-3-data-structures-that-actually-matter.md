@@ -191,3 +191,17 @@ class Queue {
 }
 const queue = new Queue()
 ```
+
+### 3-5 Linked-list - A Visual Representation
+
+In linked list, it is a list of nodes and each nodes can contain value and can connect in next node and previous node using pointer.
+
+- **Head**: If the node does not have any previous node pointer then it is first node or head.
+
+- **Tail**: If the node does not have any last node pointer then it is last node or tail.
+
+```mermaid
+graph LR
+   A[10] <--> B[20]
+   B <--> C[30]
+```
