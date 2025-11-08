@@ -47,7 +47,7 @@ Try to avoid nested loops to prevent `O(n^2)` time complexity.
 
 ## 4-6 Binary Search Algorithm
 
-```js {3} showLineNumbers title="PSEUDO Code Of binary Search"
+```js showLineNumbers title="PSEUDO Code Of binary Search"
  Algorithm BinarySearch(arr, target)
 
      low ← 0
@@ -68,4 +68,47 @@ Try to avoid nested loops to prevent `O(n^2)` time complexity.
      return -1                     // target not found
 
 End Algorithm
+```
+
+## 4-7 Let us talk about O(log n)
+
+**Logarithm:** How many times do I have to multiply a number by itself to reach another number?
+
+`log₂ 8 = 3 → because 2 × 2 × 2 = 8`
+
+**In Algo:** How many steps it will take me to reach 1 where the data set = n
+
+## 4-8 Selection sort visualization
+
+**In Place:** Algorithm transforms or processes the input data directly within its original memory location without needing to create a separate data.
+
+```js title="PSEUDO Code of Selection Sort" showLineNumbers
+Algorithm SelectionSort(arr)
+    n ← length(arr)
+
+    for i ← 0 to n - 2 do
+        minIndex ← i
+
+        // Find the smallest element in the unsorted part
+        for j ← i + 1 to n - 1 do
+            if arr[j] < arr[minIndex] then
+                minIndex ← j
+            end if
+        end for
+
+        // Swap the found minimum element with the first element
+        if minIndex ≠ i then
+            swap(arr[i], arr[minIndex])
+        end if
+    end for
+
+    return arr
+End Algorithm
+
+```
+
+# 4-10 Insertion sort implementation
+
+```js title="PSEUDO Code of Insertion Sort" showLineNumbers
+
 ```
