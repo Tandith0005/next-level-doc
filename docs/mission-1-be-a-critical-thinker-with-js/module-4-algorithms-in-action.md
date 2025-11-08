@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Module 4 Algorithms in Action
 
 ---
@@ -41,3 +44,28 @@ Try to avoid nested loops to prevent `O(n^2)` time complexity.
 :::
 
 [Click Here To See Problems and Solution](https://github.com/Apollo-Level2-Web-Dev/critical-thinking/tree/main/module-04/solutions)
+
+## 4-6 Binary Search Algorithm
+
+```js {3} showLineNumbers title="PSEUDO Code Of binary Search"
+ Algorithm BinarySearch(arr, target)
+
+     low ← 0
+     high ← length(arr) - 1
+
+     while low ≤ high do
+         mid ← floor (low + high) / 2
+
+         if arr[mid] = target then
+             return mid            // target found
+         else if arr[mid] < target then
+             low ← mid + 1         // search in right half
+         else
+             high ← mid - 1        // search in left half
+         end if
+     end while
+
+     return -1                     // target not found
+
+End Algorithm
+```
